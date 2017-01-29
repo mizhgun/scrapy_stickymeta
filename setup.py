@@ -1,12 +1,36 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 setup(
     name='stickymeta',
-    version='0.0.3',
-    packages=['stickymeta'],
+    version='0.0.5',
+    packages=find_packages(exclude=('tests', 'tests.*')),
     url='http://github.com/mizhgun/scrapy_stickymeta',
     license='MIT',
     author='Mikhail Kolganov',
     author_email='mikhail.kolganov@gmail.com',
-    description='Handy tools to maintain persistent meta values between requests in Scrapy spiders'
+    description='Handy tools to maintain persistent meta values between requests in Scrapy spiders',
+    long_description=open('README.rst').read(),
+    keywords=['scrapy'],
+    classifiers=[
+        'Framework :: Scrapy',
+        'Development Status :: 3 - Alpha',
+        'Environment :: Console',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Topic :: Internet :: WWW/HTTP',
+        'Topic :: Software Development :: Libraries',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+    ],
+    install_requires=[
+        'Scrapy>=1.0.0',
+    ],
 )
